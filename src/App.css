@@ -1,38 +1,129 @@
+/* General Styles */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0); /* تدرج ألوان جميل */
+  margin: 0;
+  padding: 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  max-width: 200px; /* حجم الصورة */
+  margin-bottom: 15px;
+  border-radius: 10px; /* حواف مستديرة للصورة */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل للصورة */
+}
+
+.App-header p {
+  font-size: 1.2rem;
+  color: #f0f8ff;
+  margin: 0;
+}
+
+/* Chat Container */
+.chat-container {
+  width: 100%; /* أخذ كامل العرض */
+  height: 60vh; /* ارتفاع ثابت للشاشة */
+  padding: 20px;
+  box-sizing: border-box; /* لتجنب مشاكل الحواف */
+  background-color: white;
+  border-radius: 20px; /* حواف مستديرة */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ظل أجمل */
+  overflow-y: auto; /* لتفعيل التمرير العمودي */
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* مسافة بين الرسائل */
+}
+
+.message {
+  padding: 15px;
+  border-radius: 10px; /* حواف مستديرة للرسائل */
+  max-width: 80%;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.message.user {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* تدرج ألوان للمستخدم */
+  color: white;
+  align-self: flex-end;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message.bot {
+  background: linear-gradient(135deg, #c3ecff, #ffffff); /* تدرج ألوان للروبوت */
+  color: #333;
+  align-self: flex-start;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  width: 100%; /* أخذ كامل العرض */
+  padding: 10px;
+  box-sizing: border-box; /* لتجنب مشاكل الحواف */
+  background: linear-gradient(135deg, #6dd5ed, #2193b0); /* تدرج ألوان للخلفية */
+  border-radius: 0 0 20px 20px; /* حواف مستديرة */
+}
+
+.input-area input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 20px 0 0 20px; /* حواف مستديرة */
+  outline: none;
+  font-size: 1rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* ظل داخلي */
+}
+
+.input-area button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 0 20px 20px 0; /* حواف مستديرة */
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* تدرج ألوان للزر */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل للزر */
+}
+
+.input-area button:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f); /* تغيير اللون عند التحويم */
+}
+
+/* Features */
+.features {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.features button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px; /* حواف مستديرة */
+  background: linear-gradient(135deg, #6dd5ed, #2193b0); /* تدرج ألوان للأزرار */
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل للأزرار */
+}
+
+.features button:hover {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed); /* تغيير اللون عند التحويم */
 }
